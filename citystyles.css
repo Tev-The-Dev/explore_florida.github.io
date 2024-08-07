@@ -1,0 +1,64 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+}
+#home{
+    width: 60px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#nav li {
+    display: inline;
+
+}
+table {
+    float: left;
+    width: 20%;
+
+}
+#image {
+    grid-area: image;
+    object-fit: cover;
+    width: 100%;
+    max-height: auto;
+    width: 98%;
+    border: 3px solid black;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.content_container {
+    display: grid;
+    grid-template-columns: 60% 20%;
+    grid-template-areas: 
+        "image image"
+        "main news"
+        "main form"
+        "aside map";
+        justify-content: space-around;
+}
+#form {
+    grid-area: form;
+}
+#map {
+
+    grid-area: map;
+}
+#main_content {
+    grid-area: main;
+}
+#news {
+    grid-area: news;
+}
+#city_map {
+    object-fit: cover;
+    width: 100%;
+    max-height: auto;
+}
+a:hover {
+    color: aqua;
+}
+header {
+    text-align: center;
+}

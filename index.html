@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en">
+    <title>Florida Tourism</title>
+    <link rel="stylesheet" href="styles.css">  </link>
+    <link rel="icon" type="image/x-icon" href="/Images/florida_flag.webp">
+    <nav> 
+        <ul>
+            <li><a href="index.html"><img id="home" src="/Images/florida_flag.webp" alt="flag of Florida"></a></li></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="capital.html">Tallahassee</a></li>
+            <li><a href="city1.html">Orlando</a></li>
+            <li><a href="city2.html">Key West</a></li>
+        </ul>
+    </nav>
+    <hr>
+</head>
+<body>
+    <container id="banner_content">
+        <h1 id="intro">Welcome to the Sunshine State</h1>
+        <img src="/Images/miami_banner.png" alt="Miami Beach" id="banner">
+    </container>
+    <div id="container">
+        <section id="main_content">
+            <h2>Main Content</h2>
+            <p>
+                Welcome to Florida! We are located in the south east of the United States. With many gorgeous beaches, natural wildlife, bustling cities and many more, we have something for everyone out there. From Panama City to the Keys, 
+                Are you looking for a vibrant night life, check out Miami, if you want something more serene, try Key West, and if you want to visity the happiest place on earth, come to Orlando for Disney!
+            </p>
+            <img id="florida" src="/Images/google_maps_florida.png" alt="google maps of Florida">
+        </section>
+        <section id="news">
+            <h2>News</h2>
+            <h3>Weather</h3>
+            <p>The statewide annual average temperature was 73.4°F in 2023, which was 3.2°F above the 20th century average of 70.1°F and tied with 2015.</p>
+            <h3>Population</h3>
+            <p>As of last census in 2022, Florida has 22.24 million residents.</p>
+            <h3>Area</h3>
+            <p>Area 65,757 square miles (170,311 square km)</p>
+            <h3>Avg. Income</h3>
+            <p>Average Income: $36,000- $40,000 </p>
+        </section>
+        <aside>
+            <h2>Aside</h2>
+            <p>
+                Florida is host to many famous cities. Miami, located in south Florida is famous, especially with Will Smiths songs about him partying there. Orlando, although not the capital of the state is considered to be more of the capital that Tallahassee which is the capital.
+                Key West is a series of islands off the coast of south Florida and is the furthest point in continental Unites States.
+            </p>
+        </aside>
+        <div>
+            <h3>Sign up for Statewide news and notifications</h3>
+            <form id="emailForm" action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="POST" onsubmit="return validateForm()">
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="John" required>
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Doe" required>
+                </div>
+                <div>
+                    <label for="email1">Email:</label>
+                    <input type="email" id="email1" name="email1" placeholder="john_doe@email.com" required>
+                </div>
+                <div>
+                    <label for="email2">Confirm Email:</label>
+                    <input type="email" id="email2" name="email2" placeholder="jon_doe@email.com" required>
+                </div>
+                <div>
+                    <label for="summary">Leave a comment or message below:</label>
+                    <textarea id="summary" name="summary" rows="4" cols="50" placeholder="I'd like to let you know..."></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+                <div>
+                    <span id="error" class="error"></span>
+                </div>
+            </form>
+        </div>
+        <script>
+           function validateForm() {
+                let e1 = document.getElementById('email1').value;
+                let e2 = document.getElementById('email2').value;
+
+                let errorSpan = document.getElementById('error');
+                errorSpan.textContent = '';
+
+                if (e1 != e2) {
+                    errorSpan.textContent = 'The email addresses do not match';
+                    errorSpan.style.color = 'red';
+                    return false;
+                }
+                else {
+                    errorSpan.textContent = 'Email addresses match!';
+                    errorSpan.className = 'success';
+                    errorSpan.style.color = 'green';
+                    return true;
+                }
+           }
+        </script>
+    </div>
+</body>
+<hr>
+<footer>Tevyn Payne &copy;</footer>
