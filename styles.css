@@ -17,6 +17,19 @@ img {
     margin: 5px;
     border-radius: 5px;
 }
+#banner_content {
+    position: relative;
+}
+#intro {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: white;
+    font-size: 40px;
+    z-index: 1;
+    text-shadow: 3px 3px black;
+}
+
 
 #container {
     display: grid;
@@ -29,7 +42,6 @@ img {
 
 }
 #main_content {
-    
     padding: 2px;
     margin: 5px;
     grid-area: main;
@@ -48,23 +60,7 @@ aside {
     grid-area: aside;
     font-size: 12px;
 }
-#banner_content {
-    position: relative;
-    height: 300px;
-    z-index: 0;
-}
-#intro {
-    position: absolute;
-    left: 20px;
-    top: 50;
-    color: white;
-    font-size: 40px;
-    z-index: 1;
-    text-shadow: 3px 3px black;
-}
-#banner {
-    z-index: 0;
-}
+
 a:hover {
     color: aqua;
 }

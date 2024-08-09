@@ -80,25 +80,25 @@
                 </form>
             </div>
             <script>
-            function validateForm() {
-                    let e1 = document.getElementById('email1').value;
-                    let e2 = document.getElementById('email2').value;
+                function validateForm() {
+                        let e1 = document.getElementById('email1').value;
+                        let e2 = document.getElementById('email2').value;
 
-                    let errorSpan = document.getElementById('error');
-                    errorSpan.textContent = '';
+                        let errorSpan = document.getElementById('error');
+                        errorSpan.textContent = '';
 
-                    if (e1 != e2) {
-                        errorSpan.textContent = 'The email addresses do not match';
-                        errorSpan.style.color = 'red';
-                        return false;
-                    }
-                    else {
-                        errorSpan.textContent = 'Email addresses match!';
-                        errorSpan.className = 'success';
-                        errorSpan.style.color = 'green';
-                        return true;
-                    }
-            }
+                        if (e1 != e2) {
+                            errorSpan.textContent = 'The email addresses do not match';
+                            errorSpan.style.color = 'red';
+                            return false;
+                        }
+                        else {
+                            errorSpan.textContent = 'Email addresses match!';
+                            errorSpan.className = 'success';
+                            errorSpan.style.color = 'green';
+                            return true;
+                        }
+                }
             </script>
         </section>
     </body>
